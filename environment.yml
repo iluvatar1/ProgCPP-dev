@@ -21,8 +21,8 @@ dependencies:
   - seaborn
   - jupyterlab
   - jupyterlab-lsp
-  - code-server >=3.2
-  # - python-lsp-server
+  - jupyter-vscode-proxy
+  - python-lsp-server
   # - ipywidgets
   # - jupyter_contrib_nbextensions
   # - pandas

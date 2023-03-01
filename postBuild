@@ -7,8 +7,4 @@
 
 # test -e test.png && rm test.png
 
-code-server --install-extension ms-python.python
-code-server --install-extension ms-vscode.cpptools
-
-# Install the VS code proxy
-pip install -e.
+#gfortran
