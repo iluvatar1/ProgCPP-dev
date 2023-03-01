@@ -1,4 +1,7 @@
-# Based on https://github.com/arcelioeperez/NotebooksC/blob/main/environment.yml
+# Based on
+# https://github.com/arcelioeperez/NotebooksC/blob/main/environment.yml
+# https://github.com/betatim/vscode-binder
+
 name: xeus-cling
 channels:
   - QuantStack
@@ -18,6 +21,7 @@ dependencies:
   - seaborn
   - jupyterlab
   - jupyterlab-lsp
+  - code-server >=3.2
   # - python-lsp-server
   # - ipywidgets
   # - jupyter_contrib_nbextensions
