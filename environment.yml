@@ -9,8 +9,9 @@ dependencies:
   - notebook
   - cmake
   - clang
+  - clang-format
   - gcc
-  #- cxx-compiler
+  - cxx-compiler
   #- cpp-argparse
   #- graphviz
   #- libblas
