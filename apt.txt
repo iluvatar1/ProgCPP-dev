@@ -1,2 +1,9 @@
 #add-apt-repository -y ppa:ubuntu-toolchain-r/test
 #gnuplot
+
+# From https://github.com/ENCCS/cmake-workshop
+emacs-nox
+nano
+tree
+vim-nox
+# gcc-12 ???

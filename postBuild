@@ -8,3 +8,8 @@
 # test -e test.png && rm test.png
 
 #gfortran
+#curl -fsSL https://code-server.dev/install.sh | sh
+#code-server --install-extension ms-python.python
+
+# Install the VS code proxy
+#pip install -e.

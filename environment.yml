@@ -2,35 +2,41 @@
 # https://github.com/arcelioeperez/NotebooksC/blob/main/environment.yml
 # https://github.com/betatim/vscode-binder
 
-name: xeus-cling
+name: ProgCPP-dev
 channels:
-  - QuantStack
   - conda-forge
 dependencies:
-  - xeus-cling
-  - xtensor
-  - xtensor-blas
   - notebook
   - cmake
-  - cxx-compiler
-  - cpp-argparse
-  - python
+  - clang
+  - gcc
+  #- cxx-compiler
+  #- cpp-argparse
+  #- graphviz
+  #- libblas
+  #- liblapack
+  #- libuuid
+  #- openmpi
+  #- ninja
+  #- pkg-config
+  - python >=3.9
   - numpy
   - matplotlib
   - scipy
   - seaborn
   - jupyterlab
   - jupyterlab-lsp
-  - jupyter-vscode-proxy
+  # - jupyter-vscode-proxy
   - python-lsp-server
+  # - code-server
   # - ipywidgets
-  # - jupyter_contrib_nbextensions
+  - jupyter_contrib_nbextensions
   # - pandas
   # - pulp
   # - bokeh
   # - plotly
   # - vpython
   # - jupyterlab-vpython
-  # - pip
+  - pip
   # - pip:
   #   - nbgrader
