@@ -6,4 +6,4 @@ emacs-nox
 nano
 tree
 vim-nox
-# gcc-12 ???
+gnuplot-nox
