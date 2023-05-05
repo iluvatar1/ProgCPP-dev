@@ -7,3 +7,4 @@ nano
 tree
 vim-nox
 gnuplot-nox
+libeigen3-dev
