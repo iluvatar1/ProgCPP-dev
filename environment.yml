@@ -21,23 +21,23 @@ dependencies:
   #- ninja
   #- pkg-config
   - python >=3.9
-  - numpy
-  - matplotlib
-  - scipy
-  - seaborn
+  #- numpy
+  #- matplotlib
+  #- scipy
+  #- seaborn
   - jupyterlab
-  - jupyterlab-lsp
+  #- jupyterlab-lsp
   # - jupyter-vscode-proxy
-  - python-lsp-server
+  #- python-lsp-server
   # - code-server
   # - ipywidgets
-  - jupyter_contrib_nbextensions
+  #- jupyter_contrib_nbextensions
   # - pandas
   # - pulp
   # - bokeh
   # - plotly
   # - vpython
   # - jupyterlab-vpython
-  - pip
+  #- pip
   # - pip:
   #   - nbgrader

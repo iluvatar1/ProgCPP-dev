@@ -2,9 +2,9 @@
 #gnuplot
 
 # From https://github.com/ENCCS/cmake-workshop
-emacs-nox
-nano
-tree
-vim-nox
-gnuplot-nox
-libeigen3-dev
+#emacs-nox
+#nano
+#tree
+#vim-nox
+#gnuplot-nox
+#libeigen3-dev
