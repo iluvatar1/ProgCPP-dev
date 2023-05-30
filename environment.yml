@@ -25,7 +25,7 @@ dependencies:
   #- matplotlib
   #- scipy
   #- seaborn
-  #- jupyterlab
+  - jupyterlab
   #- jupyterlab-lsp
   # - jupyter-vscode-proxy
   #- python-lsp-server

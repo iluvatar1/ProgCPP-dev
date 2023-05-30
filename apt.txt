@@ -7,4 +7,4 @@
 #tree
 #vim-nox
 #gnuplot-nox
-#libeigen3-dev
+libeigen3-dev
