@@ -6,12 +6,12 @@ name: ProgCPP-dev
 channels:
   - conda-forge
 dependencies:
-  - notebook
-  - cmake
-  - clang
-  - clang-format
-  - gcc
-  - cxx-compiler
+  #- notebook
+  #- cmake
+  #- clang
+  #- clang-format
+  #- gcc
+  #- cxx-compiler
   #- cpp-argparse
   #- graphviz
   #- libblas
@@ -20,12 +20,12 @@ dependencies:
   #- openmpi
   #- ninja
   #- pkg-config
-  - python >=3.9
+  #- python >=3.9
   #- numpy
   #- matplotlib
   #- scipy
   #- seaborn
-  - jupyterlab
+  #- jupyterlab
   #- jupyterlab-lsp
   # - jupyter-vscode-proxy
   #- python-lsp-server
