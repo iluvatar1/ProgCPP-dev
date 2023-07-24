@@ -1,0 +1,12 @@
+jupyterlab
+jupyterlab-lsp
+jupyterlab-git
+pandas
+vpython
+ipython
+seaborn
+RISE
+pylint
+autopep8
+jupyter-collaboration
+jupyterlab-link-share
