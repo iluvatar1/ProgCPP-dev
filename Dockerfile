@@ -25,9 +25,25 @@ RUN apt-get update && \
     && apt-get clean && \
     rm -rf /var/lib/apt/lists/*
 
+# install the notebook package
+RUN pip install --upgrade pip && \
+    pip install notebook jupyterlab
+
+# Copy only the requirements file first
+COPY requirements.txt .
+
+# Install extra Python packages
+RUN python3 -m pip install -r requirements.txt
+
+# Insall starship to show git branch in prompt plus some other stuff
+RUN curl -fsSL https://starship.rs/install.sh | sh -s -- -y
+
 # Fix timezone
 ENV TZ=America/Bogota
 RUN ln -snf /usr/share/zoneinfo/$TZ /etc/localtime && echo $TZ > /etc/timezone
+
+# Set the SHELL environment variable to /bin/bash
+ENV SHELL=/bin/bash
 
 # create user with a home directory
 ARG NB_USER=jovyan
@@ -41,30 +57,12 @@ RUN adduser --disabled-password \
     --uid ${NB_UID} \
     ${NB_USER}
 
-# Copy only the requirements file first
-COPY requirements.txt ${HOME}/
-
 # Copy the rest of the files
 COPY . ${HOME}
 
 # Set ownership of files
 USER root
 RUN chown -R ${NB_UID} ${HOME}
-
-# install the notebook package
-#RUN pip install --no-cache --upgrade pip && \
-#    pip install --no-cache jupyterlab
-RUN pip install --upgrade pip && \
-    pip install jupyterlab
-
-# Install extra Python packages
-RUN python3 -m pip install --no-cache-dir -r ${HOME}/requirements.txt
-
-# Insall starship to show git branch in prompt plus some other stuff
-RUN curl -fsSL https://starship.rs/install.sh | sh -s -- -y
-
-# Set the SHELL environment variable to /bin/bash
-ENV SHELL=/bin/bash
 
 WORKDIR ${HOME}
 USER ${USER}
@@ -73,6 +71,3 @@ USER ${USER}
 RUN MPLBACKEND=Agg python3 -c "import matplotlib.pyplot"
 # Setup starship
 RUN echo 'eval "$(starship init bash)"' >> ${HOME}/.bashrc
-
-WORKDIR ${HOME}
-USER ${USER}

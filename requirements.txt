@@ -1,4 +1,3 @@
-jupyterlab
 jupyterlab-lsp
 jupyterlab-git
 pandas
@@ -10,3 +9,6 @@ pylint
 autopep8
 jupyter-collaboration
 jupyterlab-link-share
+jupyterlab_vpython
+python-lsp-server
+pyright
