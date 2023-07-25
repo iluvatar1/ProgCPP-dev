@@ -22,6 +22,7 @@ RUN apt-get update && \
     curl \
     unzip \
     sudo \
+    cpplint \
     && apt-get clean && \
     rm -rf /var/lib/apt/lists/*
 
