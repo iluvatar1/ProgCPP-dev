@@ -12,3 +12,4 @@ jupyterlab-link-share
 jupyterlab_vpython
 python-lsp-server
 pyright
+nb-js-diagrammers
