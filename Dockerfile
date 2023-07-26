@@ -72,3 +72,9 @@ USER ${USER}
 RUN MPLBACKEND=Agg python3 -c "import matplotlib.pyplot"
 # Setup starship
 RUN echo 'eval "$(starship init bash)"' >> ${HOME}/.bashrc
+
+# Clone the lectures repo
+RUN git clone https://github.com/iluvatar1/ProgCPP-lectures-jupyter
+
+# Clone the source code repo
+RUN git clone https://github.com/iluvatar1/2023-II-ProgCPP
