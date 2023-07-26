@@ -36,7 +36,19 @@ COPY requirements.txt .
 # Install extra Python packages
 RUN python3 -m pip install -r requirements.txt
 
-# Insall starship to show git branch in prompt plus some other stuff
+# Install catch2
+RUN git clone https://github.com/catchorg/Catch2.git
+RUN cd Catch2 && \
+    cmake -Bbuild -H. -DBUILD_TESTING=OFF && \
+    sudo cmake --build build/ --target install --parallel $(nproc)
+
+# Install fmt
+RUN git clone https://github.com/fmtlib/fmt.git
+RUN cd fmt && \
+    cmake -Bbuild -H. -DBUILD_SHARED_LIBS=TRUE -DFMT_TEST=OFF && \
+    sudo cmake --build build/ --target install --parallel $(nproc)
+
+# Install starship to show git branch in prompt plus some other stuff
 RUN curl -fsSL https://starship.rs/install.sh | sh -s -- -y
 
 # Fix timezone
