@@ -1,0 +1,11 @@
+#!/bin/bash
+
+# set environment variables
+# ...
+
+# execute run commands
+# ...
+git clone https://github.com/iluvatar1/ProgCPP-lectures-jupyter
+git clone https://github.com/iluvatar1/2023-II-ProgCPP
+
+exec "$@"
