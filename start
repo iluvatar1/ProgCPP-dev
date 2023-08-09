@@ -5,8 +5,29 @@
 
 # execute run commands
 # ...
-git clone https://github.com/iluvatar1/ProgCPP-lectures-jupyter
-git clone https://github.com/iluvatar1/ProgCPP
-git clone https://github.com/iluvatar1/2023-II-ProgCPP
+
+#!/bin/bash
+
+# Get the list of repos
+repos=(
+  "ProgCPP-lectures-jupyter"
+  "ProgCPP"
+  "2023-II-ProgCPP"
+)
+
+# Loop over the repos
+for repo in "${repos[@]}"; do
+  # Check if the repo is already there
+  if [ ! -d "$repo" ]; then
+    # The repo is not there, so clone it
+    git clone https://github.com/iluvatar1/$repo
+  fi
+
+  # Enter the repo
+  cd $repo
+
+  # Perform a git pull
+  git pull
+done
 
 exec "$@"
